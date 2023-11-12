@@ -14716,7 +14716,7 @@ figcaption {
 
 @media screen and (max-width: 479px) {
   h1 {
-    font-size: 32px;
+    font-size: 3rem;
   }
 
   h2 {
