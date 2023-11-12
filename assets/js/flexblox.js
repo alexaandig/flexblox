@@ -1,9 +1,9 @@
 /*!
- * Webflow: Front-end site library
+ * Flexblox: Front-end site library
  * @license MIT
  * Inline scripts may access the api using an async handler:
- *   var Webflow = Webflow || [];
- *   Webflow.push(readyFunction);
+ *   var Flexblox = Flexblox || [];
+ *   Flexblox.push(readyFunction);
  */ !(function (e) {
   var t = {};
   function n(r) {
@@ -255,7 +255,7 @@
     var r = {},
       i = {},
       o = [],
-      a = window.Webflow || [],
+      a = window.Flexblox || [],
       c = window.jQuery,
       u = c(window),
       s = c(document),
@@ -313,7 +313,7 @@
             : "slug" === e
             ? n && window.__wf_slug
             : "editor" === e
-            ? window.WebflowEditor
+            ? window.FlexbloxEditor
             : "test" === e
             ? window.__wf_test
             : "frame" === e
@@ -344,7 +344,7 @@
             return !0;
           });
     var y,
-      O = "resize.webflow orientationchange.webflow load.webflow";
+      O = "resize.flexblox orientationchange.flexblox load.flexblox";
     function T(e, t) {
       var n = [],
         r = {};
@@ -379,7 +379,7 @@
     (r.resize = T(u, O)),
       (r.scroll = T(
         u,
-        "scroll.webflow resize.webflow orientationchange.webflow load.webflow"
+        "scroll.flexblox resize.flexblox orientationchange.flexblox load.flexblox"
       )),
       (r.redraw = T()),
       (r.location = function (e) {
@@ -410,7 +410,7 @@
       }),
       c(r.ready),
       S(),
-      (e.exports = window.Webflow = r);
+      (e.exports = window.Flexblox = r);
   },
   function (e, t, n) {
     var r = n(5);
@@ -633,13 +633,13 @@
     t.DOWNLOAD_FILES_FAKE_DATA = [
       {
         id: "5d8fcb6d94dd1853060fb3b3",
-        name: "The modern web design process - Webflow Ebook.pdf",
-        url: "https://assets-global.website-files.com/5cf6b7202bf8199f50d43e6c/5e9dd8a680b972888929747b_The%20modern%20web%20design%20process%20-%20Webflow%20Ebook.pdf",
+        name: "The modern web design process - Flexblox Ebook.pdf",
+        url: "https://assets-global.website-files.com/5cf6b7202bf8199f50d43e6c/5e9dd8a680b972888929747b_The%20modern%20web%20design%20process%20-%20Flexblox%20Ebook.pdf",
       },
       {
         id: "5d8fcb6d94dd1853060fb3b4",
-        name: "The freelance web designers guide - Webflow Ebook.pdf",
-        url: "https://assets-global.website-files.com/5cf6b7202bf8199f50d43e6c/5e9dd8e6abe52b33243a22cf_The%20freelance%20web%20designer%E2%80%99s%20guide%20-%20Webflow%20Ebook.pdf",
+        name: "The freelance web designers guide - Flexblox Ebook.pdf",
+        url: "https://assets-global.website-files.com/5cf6b7202bf8199f50d43e6c/5e9dd8e6abe52b33243a22cf_The%20freelance%20web%20designer%E2%80%99s%20guide%20-%20Flexblox%20Ebook.pdf",
       },
     ];
     t.DOWNLOAD_FILES_KEY_PATH = "download-files";
@@ -1796,7 +1796,7 @@
         : t;
     };
     t.setElementLoading = function (e) {
-      var t = window.Webflow.tram(e);
+      var t = window.Flexblox.tram(e);
       t.set({ opacity: 0.2 }), t.add("opacity 500ms ease-in-out");
       var n = function () {
         t.start({ opacity: 0.2 }).then({ opacity: 0.4 }).then(n);
@@ -2280,15 +2280,15 @@
         if (n)
           return t
             ? setTimeout(function () {
-                return window.Webflow.location(n);
+                return window.Flexblox.location(n);
               }, 3e3)
-            : window.Webflow.location(n);
+            : window.Flexblox.location(n);
         if (!e) return;
         return t
           ? setTimeout(function () {
-              return window.Webflow.location(e);
+              return window.Flexblox.location(e);
             }, 3e3)
-          : window.Webflow.location(e);
+          : window.Flexblox.location(e);
       }),
       (t.hideElement = function (e) {
         e && (e.style.display = "none");
@@ -7420,7 +7420,7 @@
         function e(t) {
           if (
             (i(this, e),
-            !window.Webflow.env("design") && !window.Webflow.env("preview"))
+            !window.Flexblox.env("design") && !window.Flexblox.env("preview"))
           ) {
             var n = t.querySelector("[".concat(u.STRIPE_ECOMMERCE_KEY, "]"));
             if (!n)
@@ -10078,8 +10078,8 @@
       M = n(380);
     t.initializeStripeElements = function (e) {
       if (
-        !window.Webflow.env("design") &&
-        !window.Webflow.env("preview") &&
+        !window.Flexblox.env("design") &&
+        !window.Flexblox.env("preview") &&
         e.isInitialized()
       ) {
         var t = (0, s.findAllElementsByNodeType)(
@@ -10422,7 +10422,7 @@
           .concat(e.orderId, "&token=")
           .concat(e.token);
       if (t) {
-        var r = { isWebflow: !0, type: "success", detail: n };
+        var r = { isFlexblox: !0, type: "success", detail: n };
         window.parent.postMessage(JSON.stringify(r), window.location.origin);
       } else window.location.href = n;
     };
@@ -15667,9 +15667,9 @@
       v = function (e, t, n) {
         if (
           (e.preventDefault(),
-          window.Webflow.env("design") || window.Webflow.env("preview"))
+          window.Flexblox.env("design") || window.Flexblox.env("preview"))
         )
-          window.Webflow.env("preview") &&
+          window.Flexblox.env("preview") &&
             window.alert("Web Payments is not available in preview mode.");
         else {
           var r = e.currentTarget,
@@ -24818,7 +24818,7 @@
     var r = window.$,
       i = n(231) && r.tram;
     /*!
-     * Webflow._ (aka) Underscore.js 1.6.0 (custom build)
+     * Flexblox._ (aka) Underscore.js 1.6.0 (custom build)
      * _.each
      * _.map
      * _.find
@@ -24827,12 +24827,12 @@
      * _.contains
      * _.delay
      * _.defer
-     * _.throttle (webflow)
+     * _.throttle (flexblox)
      * _.debounce
      * _.keys
      * _.has
      * _.now
-     * _.template (webflow: upgraded to 1.13.6)
+     * _.template (flexblox: upgraded to 1.13.6)
      *
      * http://underscorejs.org
      * (c) 2009-2013 Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
@@ -24840,7 +24840,7 @@
      * @license MIT
      */
     e.exports = (function () {
-      var e = { VERSION: "1.6.0-Webflow" },
+      var e = { VERSION: "1.6.0-Flexblox" },
         t = {},
         n = Array.prototype,
         r = Object.prototype,
@@ -25094,12 +25094,12 @@
             n.load ||
             function () {
               (i = !0),
-                (window.WebflowEditor = !0),
+                (window.FlexbloxEditor = !0),
                 o.off(u, f),
                 (function (e) {
                   var t = window.document.createElement("iframe");
                   (t.src =
-                    "https://webflow.com/site/third-party-cookie-check.html"),
+                    "https://flexblox.com/site/third-party-cookie-check.html"),
                     (t.style.display = "none"),
                     (t.sandbox = "allow-scripts allow-same-origin");
                   var n = function (r) {
@@ -25115,7 +25115,7 @@
                     window.document.body.appendChild(t);
                 })(function (t) {
                   e.ajax({
-                    url: m("https://editor-api.webflow.com/api/editor/view"),
+                    url: m("https://editor-api.flexblox.com/api/editor/view"),
                     data: { siteId: a.attr("data-wf-site") },
                     xhrFields: { withCredentials: !0 },
                     dataType: "json",
@@ -25129,7 +25129,7 @@
           l =
             localStorage &&
             localStorage.getItem &&
-            localStorage.getItem("WebflowEditor");
+            localStorage.getItem("FlexbloxEditor");
         } catch (e) {}
         function f() {
           i || (/\?edit/.test(c.hash) && s());
@@ -25140,7 +25140,7 @@
               ? ((t.thirdPartyCookiesSupported = e),
                 p(h(t.bugReporterScriptPath), function () {
                   p(h(t.scriptPath), function () {
-                    window.WebflowEditor(t);
+                    window.FlexbloxEditor(t);
                   });
                 }))
               : console.error("Could not load editor data");
@@ -25158,7 +25158,7 @@
         function h(e) {
           return e.indexOf("//") >= 0
             ? e
-            : m("https://editor-api.webflow.com" + e);
+            : m("https://editor-api.flexblox.com" + e);
         }
         function m(e) {
           return e.replace(/([^:])\/\//g, "$1/");
@@ -26984,7 +26984,7 @@
       return { value: e.value };
     };
     t.createPluginInstance = function (e) {
-      var t = window.Webflow.require("lottie").createInstance(e);
+      var t = window.Flexblox.require("lottie").createInstance(e);
       return t.stop(), t.setSubframe(!0), t;
     };
     t.renderPlugin = function (e, t, n) {
@@ -26994,7 +26994,7 @@
       }
     };
     t.clearPlugin = function (e) {
-      window.Webflow.require("lottie").createInstance(e).stop();
+      window.Flexblox.require("lottie").createInstance(e).stop();
     };
   },
   function (e, t, n) {
@@ -29696,7 +29696,7 @@
         var t = e.siteId;
         (h = (0, o.createApolloClient)({
           path:
-            window.Webflow.env("design") || window.Webflow.env("preview")
+            window.Flexblox.env("design") || window.Flexblox.env("preview")
               ? "/api/v1/sites/".concat(t, "/apollo")
               : A,
           maxAttempts: 5,
@@ -29714,8 +29714,8 @@
           b(),
           _(),
           (0, p.triggerRender)(null, !0),
-          window.Webflow.env() ||
-            window.Webflow.load((0, E.renderPaypalButtons)(h));
+          window.Flexblox.env() ||
+            window.Flexblox.load((0, E.renderPaypalButtons)(h));
       }),
       (t.preview = function () {
         b(), _(), (0, p.triggerRender)(null, !0);
@@ -36670,7 +36670,7 @@
     var r = n(2).default;
     Object.defineProperty(t, "__esModule", { value: !0 }),
       (t.fetchWithCsrf = function (e, t) {
-        if (window.Webflow.env("design") || window.Webflow.env("preview"))
+        if (window.Flexblox.env("design") || window.Flexblox.env("preview"))
           return fetch(e, t);
         var n = u(),
           r = (t && t.headers) || {};
@@ -40707,8 +40707,8 @@
                 )[0];
                 f instanceof Element && (f.style.display = "none");
               }),
-                window.Webflow.require("lightbox") &&
-                  window.Webflow.require("lightbox").ready();
+                window.Flexblox.require("lightbox") &&
+                  window.Flexblox.require("lightbox").ready();
             } else C(e, { selectedSku: "" });
           });
         };
@@ -40720,7 +40720,7 @@
               .concat(d.DATA_ATTR_NODE_TYPE, '="')
               .concat(d.NODE_TYPE_COMMERCE_ADD_TO_CART_FORM, '"]')
           );
-          window.Webflow.env("preview")
+          window.Flexblox.env("preview")
             ? e.detail.isInitial &&
               (0, O.default)(r, function (e) {
                 var t = new N.PillGroups(e, function (e) {
@@ -40730,7 +40730,7 @@
                 });
                 t.init();
               })
-            : window.Webflow.env("design") ||
+            : window.Flexblox.env("design") ||
               (0, O.default)(r, function (r) {
                 var i = (0, A.findElementByNodeType)(
                   d.NODE_TYPE_COMMERCE_ADD_TO_CART_BUTTON,
@@ -41134,7 +41134,7 @@
         );
       },
       re = function (e, t) {
-        if ((e.preventDefault(), !window.Webflow.env("preview"))) {
+        if ((e.preventDefault(), !window.Flexblox.env("preview"))) {
           var n = e.target,
             r = (0, A.findClosestElementByNodeType)(
               d.NODE_TYPE_COMMERCE_ADD_TO_CART_FORM,
@@ -42630,7 +42630,7 @@
     Object.defineProperty(t, "__esModule", { value: !0 }),
       (t.of = t.getConst = t.ConstType = t.Const = void 0);
     var o = Object.create,
-      a = "@webflow/Const/value",
+      a = "@flexblox/Const/value",
       c = r(function e() {
         i(this, e);
       });
@@ -42658,7 +42658,7 @@
     Object.defineProperty(t, "__esModule", { value: !0 }),
       (t.runIdentity = t.of = t.IdentityType = t.Identity = void 0);
     var o = Object.create,
-      a = "@webflow/Identity/value",
+      a = "@flexblox/Identity/value",
       c = r(function e() {
         i(this, e);
       });
@@ -42689,7 +42689,7 @@
       a = function () {
         return this;
       },
-      c = "@webflow/Option",
+      c = "@flexblox/Option",
       u = r(function e() {
         i(this, e);
       });
@@ -42758,8 +42758,8 @@
       a = function () {
         return this;
       },
-      c = "@webflow/Result/value",
-      u = "@webflow/Result/error",
+      c = "@flexblox/Result/value",
+      u = "@flexblox/Result/error",
       s = r(function e() {
         i(this, e);
       });
@@ -44463,8 +44463,8 @@
       l = i(n(75)),
       f = i(n(19)),
       d = i(n(776)),
-      p = { "@webflow/Boolean": !0 },
-      M = { "@webflow/Boolean": !1 },
+      p = { "@flexblox/Boolean": !0 },
+      M = { "@flexblox/Boolean": !1 },
       h = function (e, t) {
         if (e === t || (e != e && t != t)) return !0;
         if (!e || !t) return !1;
@@ -47368,7 +47368,7 @@
                 e.getAttribute(i.USYS_DATA_ATTRS.logout) || "Log out"),
               e.removeEventListener("click", c),
               e.addEventListener("click", u))
-            : window.Webflow.env("design") ||
+            : window.Flexblox.env("design") ||
               ((e.innerHTML =
                 e.getAttribute(i.USYS_DATA_ATTRS.login) || "Log in"),
               e.removeEventListener("click", u),
@@ -47381,12 +47381,12 @@
       o = n(68),
       a = "[".concat(i.USYS_DATA_ATTRS.logout, "]");
     function c() {
-      window.Webflow.env("preview") || (window.location = "/log-in");
+      window.Flexblox.env("preview") || (window.location = "/log-in");
     }
     function u(e) {
       e.preventDefault(),
         s().then(function () {
-          window.Webflow.location("/");
+          window.Flexblox.location("/");
         });
     }
     function s() {
@@ -47577,7 +47577,7 @@
         var e = document.querySelector(
           "[".concat(i.USYS_DATA_ATTRS.userAccount, "]")
         );
-        if (!e || window.Webflow.env("design") || window.Webflow.env("preview"))
+        if (!e || window.Flexblox.env("design") || window.Flexblox.env("preview"))
           return;
         var t = e.querySelector("." + i.USYS_DOM_CLASS_NAMES.formSuccess),
           n = e.querySelector("." + i.USYS_DOM_CLASS_NAMES.formError),
@@ -47660,7 +47660,7 @@
         var M;
       }),
       (t.handleUserSubscriptionLists = function (e) {
-        if (window.Webflow.env("design") || window.Webflow.env("preview"))
+        if (window.Flexblox.env("design") || window.Flexblox.env("preview"))
           return;
         var t = (function () {
           var e = document.querySelectorAll(d);
@@ -48320,7 +48320,7 @@
           : null;
       },
       B = function (e, t) {
-        if (!window.Webflow.env("design") && !window.Webflow.env("preview")) {
+        if (!window.Flexblox.env("design") && !window.Flexblox.env("preview")) {
           e.preventDefault();
           var n = e.currentTarget;
           if (n instanceof HTMLElement) {
@@ -48388,7 +48388,7 @@
         }
       },
       U = function (e, t) {
-        if (!window.Webflow.env("design") && !window.Webflow.env("preview")) {
+        if (!window.Flexblox.env("design") && !window.Flexblox.env("preview")) {
           e.preventDefault();
           var n = e.currentTarget;
           if (
@@ -48453,7 +48453,7 @@
         }
       },
       F = function (e) {
-        if (!window.Webflow.env("design") && !window.Webflow.env("preview")) {
+        if (!window.Flexblox.env("design") && !window.Flexblox.env("preview")) {
           e.preventDefault();
           var t = e.currentTarget;
           t instanceof HTMLInputElement &&
@@ -48513,11 +48513,11 @@
                   E.length > 0 && E[0].focus(),
                     m &&
                       !r &&
-                      (window.Webflow.tram(o)
+                      (window.Flexblox.tram(o)
                         .add(h)
                         .set({ opacity: 0 })
                         .start({ opacity: 1 }),
-                      window.Webflow.tram(a)
+                      window.Flexblox.tram(a)
                         .add("transform ".concat(f, " ").concat(M, " 0ms"))
                         .set(u)
                         .start(s));
@@ -48525,14 +48525,14 @@
                   document.removeEventListener("keydown", ae),
                     t.removeAttribute(d.CART_OPEN),
                     m
-                      ? (window.Webflow.tram(o)
+                      ? (window.Flexblox.tram(o)
                           .add(h)
                           .start({ opacity: 0 })
                           .then(function () {
                             (o.style.display = "none"),
-                              window.Webflow.tram(a).stop();
+                              window.Flexblox.tram(a).stop();
                           }),
-                        window.Webflow.tram(a)
+                        window.Flexblox.tram(a)
                           .add(
                             "transform "
                               .concat(f, " ")
@@ -48553,7 +48553,7 @@
         }
       },
       j = function (e) {
-        if (!window.Webflow.env("design")) {
+        if (!window.Flexblox.env("design")) {
           var t = e.currentTarget,
             n = e.type;
           if (t instanceof Element) {
@@ -48596,7 +48596,7 @@
         }
       },
       Y = function (e) {
-        if (!window.Webflow.env("preview")) {
+        if (!window.Flexblox.env("preview")) {
           e.preventDefault();
           var t = e.currentTarget;
           if (t instanceof Element)
@@ -48641,7 +48641,7 @@
         }
       },
       H = function (e) {
-        window.Webflow.env("preview") || e.preventDefault();
+        window.Flexblox.env("preview") || e.preventDefault();
       },
       G = function (e) {
         var t = e.target,
@@ -48693,9 +48693,9 @@
         V.forEach(function (e) {
           var t = e.element,
             n = e.wasOpen;
-          window.Webflow.tram(t).destroy(), (t.style.opacity = "1");
+          window.Flexblox.tram(t).destroy(), (t.style.opacity = "1");
           var r = re(t);
-          r && (window.Webflow.tram(r).destroy(), (r.style.transform = "")),
+          r && (window.Flexblox.tram(r).destroy(), (r.style.transform = "")),
             n ? t.style.removeProperty("display") : (t.style.display = "none");
           var i = t.parentElement;
           i && i.removeAttribute(d.CART_OPEN);
@@ -48790,8 +48790,8 @@
     t.renderCart = ee;
     var te = function (e, t, n) {
         if (
-          !window.Webflow.env("design") &&
-          !window.Webflow.env("preview") &&
+          !window.Flexblox.env("design") &&
+          !window.Flexblox.env("preview") &&
           e instanceof CustomEvent &&
           e.type === d.RENDER_TREE_EVENT
         ) {
@@ -48941,7 +48941,7 @@
           e.on("submit", x, H),
           e.on("keyup", Boolean, ne),
           e.on("click", Boolean, ie),
-          (window.Webflow.env("design") || window.Webflow.env("preview")) &&
+          (window.Flexblox.env("design") || window.Flexblox.env("preview")) &&
             (window.addEventListener("__wf_preview", K),
             window.addEventListener("__wf_design", Q));
       };
@@ -49073,8 +49073,8 @@
       },
       E = function (e, t, n) {
         if (
-          !window.Webflow.env("design") &&
-          !window.Webflow.env("preview") &&
+          !window.Flexblox.env("design") &&
+          !window.Flexblox.env("preview") &&
           e instanceof CustomEvent &&
           e.type === a.RENDER_TREE_EVENT
         ) {
@@ -49119,7 +49119,7 @@
       _ = !1,
       b = function (e, t, n) {
         if (
-          !(window.Webflow.env("design") || window.Webflow.env("preview") || _)
+          !(window.Flexblox.env("design") || window.Flexblox.env("preview") || _)
         ) {
           var r = e.currentTarget;
           if (r instanceof Element) {
@@ -49529,8 +49529,8 @@
       },
       p = function (e, t) {
         if (
-          !window.Webflow.env("design") &&
-          !window.Webflow.env("preview") &&
+          !window.Flexblox.env("design") &&
+          !window.Flexblox.env("preview") &&
           e instanceof CustomEvent &&
           e.type === f.RENDER_TREE_EVENT
         ) {
@@ -50043,8 +50043,8 @@
       f = !1,
       d = function (e, t) {
         if (
-          !window.Webflow.env("design") &&
-          !window.Webflow.env("preview") &&
+          !window.Flexblox.env("design") &&
+          !window.Flexblox.env("preview") &&
           e instanceof CustomEvent &&
           e.type === s.RENDER_TREE_EVENT
         ) {
@@ -50078,7 +50078,7 @@
       p = !1,
       M = function (e, t) {
         if (
-          !(window.Webflow.env("design") || window.Webflow.env("preview") || p)
+          !(window.Flexblox.env("design") || window.Flexblox.env("preview") || p)
         ) {
           var n = e.currentTarget;
           if (n instanceof Element) {
@@ -50204,7 +50204,7 @@
                                 "INSTRUMENT_DECLINED" === t.details[0].issue
                               ) {
                                 var n = {
-                                  isWebflow: !0,
+                                  isFlexblox: !0,
                                   type: "error",
                                   detail: t,
                                 };
@@ -50281,7 +50281,7 @@
                           if (u.origin === window.location.origin) {
                             var s = (0, i.safeParseJson)(String(u.data));
                             s &&
-                              !0 === s.isWebflow &&
+                              !0 === s.isFlexblox &&
                               s.type &&
                               s.detail &&
                               ("success" === s.type &&
@@ -50903,12 +50903,12 @@
             function () {
               !(function () {
                 (o = e("html").attr("data-wf-site")),
-                  (c = "https://webflow.com/api/v1/form/" + o),
+                  (c = "https://flexblox.com/api/v1/form/" + o),
                   d &&
-                    c.indexOf("https://webflow.com") >= 0 &&
+                    c.indexOf("https://flexblox.com") >= 0 &&
                     (c = c.replace(
-                      "https://webflow.com",
-                      "https://formdata.webflow.com"
+                      "https://flexblox.com",
+                      "https://formdata.flexblox.com"
                     ));
                 if (
                   ((u = "".concat(c, "/signFile")),
@@ -52192,9 +52192,9 @@
 ]);
 /**
  * ----------------------------------------------------------------------
- * Webflow: Interactions 2.0: Init
+ * Flexblox: Interactions 2.0: Init
  */
-Webflow.require("ix2").init({
+Flexblox.require("ix2").init({
   events: {
     "e-7": {
       id: "e-7",
@@ -77140,8 +77140,8 @@ Webflow.require("ix2").init({
   },
 });
 
-Webflow.require("commerce") &&
-  Webflow.require("commerce").init({
+Flexblox.require("commerce") &&
+  Flexblox.require("commerce").init({
     siteId: "610342b3dbc0773f41f900ef",
-    apiUrl: "https://render.webflow.com",
+    apiUrl: "https://render.flexblox.com",
   });
