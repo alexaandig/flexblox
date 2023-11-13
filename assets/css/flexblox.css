@@ -15555,10 +15555,12 @@ figcaption {
 
   .image.home-hero-1 {
     border-radius: 10px;
+    bottom: -16px;
   }
 
   .image.home-hero-2 {
     border-radius: 10px;
+    bottom: -16px;
   }
 
   .image.home-hero-3 {
