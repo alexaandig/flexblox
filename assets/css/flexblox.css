@@ -6222,7 +6222,6 @@ figcaption {
   position: relative;
   z-index: 1;
   display: flex;
-  min-height: 623px;
   padding: 58px 49px;
   align-items: center;
 }
@@ -13300,7 +13299,6 @@ figcaption {
   }
 
   .card.contact-form {
-    min-height: 847px;
     padding: 48px 35px;
   }
 
@@ -15228,7 +15226,6 @@ figcaption {
   }
 
   .card.contact-form {
-    min-height: 831px;
     padding: 40px 25px;
   }
 
