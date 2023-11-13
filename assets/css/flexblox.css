@@ -6669,7 +6669,7 @@ figcaption {
   z-index: 1;
   display: flex;
   max-width: 41%;
-  margin-top: 64px;
+  margin-top: 0;
   margin-right: 30px;
   flex-direction: column;
   align-items: center;
@@ -8181,7 +8181,7 @@ figcaption {
 .faqs-wrapper {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
 }
 
 .home-hero-logos-wrapper {
