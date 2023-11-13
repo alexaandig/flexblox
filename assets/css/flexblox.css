@@ -6213,7 +6213,6 @@ figcaption {
   position: relative;
   z-index: 1;
   display: flex;
-  min-height: 599px;
   padding: 69px 42px;
   flex-direction: column;
 }
@@ -11591,7 +11590,6 @@ figcaption {
   }
 
   .card.get-plan {
-    min-height: 472px;
     padding: 58px 40px;
   }
 
@@ -13297,7 +13295,6 @@ figcaption {
   }
 
   .card.get-plan {
-    min-height: 430px;
     padding: 48px 35px;
   }
 
@@ -15226,7 +15223,6 @@ figcaption {
   }
 
   .card.get-plan {
-    min-height: 489px;
     padding: 40px 25px;
   }
 
