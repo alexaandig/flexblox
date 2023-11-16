@@ -22,29 +22,13 @@
         Object.defineProperty(e, "__esModule", { value: !0 });
     }),
     (i.t = function (t, e) {
-      if ((1 & e && (t = i(t)), 8 & e)) return t;
-      if (4 & e && "object" == typeof t && t && t.__esModule) return t;
-      var n = Object.create(null);
-      if (
-        (i.r(n),
-        Object.defineProperty(n, "default", { enumerable: !0, value: t }),
-        2 & e && "string" != typeof t)
-      )
-        for (var a in t)
-          i.d(
-            n,
-            a,
-            function (e) {
-              return t[e];
-            }.bind(null, a)
-          );
-      return n;
+
     }),
     (i.n = function (e) {
       var t =
         e && e.__esModule
           ? function () {
-              return e.default;
+
             }
           : function () {
               return e;
@@ -68,7 +52,6 @@
         t("object" == typeof self && self) ||
         t("object" == typeof e && e) ||
         (function () {
-          return this;
         })() ||
         Function("return this")();
     }.call(this, t(53));
@@ -198,13 +181,7 @@
           Object.assign
             ? Object.assign.bind()
             : function (e) {
-                for (var t = 1; t < arguments.length; t++) {
-                  var n,
-                    a = arguments[t];
-                  for (n in a)
-                    Object.prototype.hasOwnProperty.call(a, n) && (e[n] = a[n]);
-                }
-                return e;
+
               }),
         (e.exports.__esModule = !0),
         (e.exports.default = e.exports),
@@ -239,7 +216,6 @@
     e.exports =
       Object.hasOwn ||
       function (e, t) {
-        return r(i(e), t);
       };
   },
   function (e, t, n) {
@@ -248,8 +224,6 @@
       r = a.String,
       o = a.TypeError;
     e.exports = function (e) {
-      if (i(e)) return e;
-      throw o(r(e) + " is not an object");
     };
   },
   function (e, t, n) {
@@ -275,16 +249,6 @@
           ((e = e), f ? e.ready() : d.contains(r, e.ready) || r.push(e.ready));
     }
     function m(e) {
-      var t;
-      u(e.design) && s.off("__wf_design", e.design),
-        u(e.preview) && s.off("__wf_preview", e.preview),
-        u(e.destroy) && s.off("__wf_destroy", e.destroy),
-        e.ready &&
-          u(e.ready) &&
-          ((t = e),
-          (r = d.filter(r, function (e) {
-            return e !== t.ready;
-          })));
     }
     (n.config.hideBackface = !1),
       (n.config.keepInherited = !0),
@@ -297,7 +261,6 @@
         return i[e];
       }),
       (a.push = function (e) {
-        f ? u(e) && e() : o.push(e);
       }),
       (a.env = function (e) {
         var t = window.__wf_design,
@@ -331,14 +294,11 @@
     (a.env.safari = /safari/.test(n) && !b && !g),
       T &&
         l.on("touchstart mousedown", function (e) {
-          y = e.target;
         }),
       (a.validClick = T
         ? function (e) {
-            return e === y || c.contains(e, y);
           }
         : function () {
-            return !0;
           });
     var M;
     function O(e, t) {
@@ -382,7 +342,6 @@
       )),
       (a.redraw = O()),
       (a.location = function (e) {
-        window.location = e;
       }),
       a.env() && (a.location = function () {}),
       (a.ready = function () {
@@ -392,20 +351,8 @@
           a.resize.up();
       }),
       (a.load = function (e) {
-        M.then(e);
       }),
       (a.destroy = function (e) {
-        (e = e || {}),
-          (p = !0),
-          s.triggerHandler("__wf_destroy"),
-          null != e.domready && (f = e.domready),
-          d.each(i, m),
-          a.resize.off(),
-          a.scroll.off(),
-          a.redraw.off(),
-          (r = []),
-          (o = []),
-          "pending" === M.state() && I();
       }),
       c(a.ready),
       I(),
@@ -435,12 +382,6 @@
     t.f = i
       ? l
       : function (e, t, n) {
-          if ((o(e), (t = c(t)), o(n), r))
-            try {
-              return l(e, t, n);
-            } catch (e) {}
-          if ("get" in n || "set" in n) throw s("Accessors not supported");
-          return "value" in n && (e[t] = n.value), e;
         };
   },
   function (e, t) {
@@ -450,416 +391,6 @@
     };
   },
   function (e, t, n) {
-    "use strict";
-    var a = n(21).default,
-      i = n(2).default,
-      r =
-        (Object.defineProperty(t, "__esModule", { value: !0 }),
-        {
-          ORDER_ID_RE: !0,
-          SHIPPING_METHODS: !0,
-          DEFAULT_TAX_CATEGORY: !0,
-          INVENTORY_TYPE_FINITE: !0,
-          INVENTORY_TYPE_INFINITE: !0,
-          INFINITE_INVENTORY: !0,
-          MAX_TOTAL_ORDER_PRICE: !0,
-          MAX_PRODUCT_DIMENSION: !0,
-          MAX_MEMBERSHIP_PRODUCTS: !0,
-          MAX_SEARCH_LIMIT: !0,
-          PRICE_TEMPLATE_CURRENCY_SYMBOL: !0,
-          PRICE_TEMPLATE_AMOUNT: !0,
-          PRICE_TEMPLATE_CURRENCY_CODE: !0,
-          PRICE_TEMPLATE_OPTIONS: !0,
-          DEFAULT_PRICE_TEMPLATE_VALUE: !0,
-          CSV_CURRENCY_TEMPLATE: !0,
-          CSV_INTEGRATION_CURRENCY_TEMPLATE: !0,
-          DOWNLOAD_FILES_FAKE_DATA: !0,
-          DOWNLOAD_FILES_KEY_PATH: !0,
-          DOWNLOAD_FILES_EDITABLE_FIELDS: !0,
-          SUBSCRIPTION_INTERVAL_ENUM: !0,
-          SUBSCRIPTION_STATUS_ENUM: !0,
-          SUBSCRIPTION_STATUS_PRETTY_ENUM: !0,
-          STRIPE_SUBSCRIPTION_STATUS_ENUM: !0,
-          ACTIVE_STRIPE_SUBSCRIPTION_STATUSES: !0,
-          ECOMMERCE_PROVIDER_NAME_ENUM: !0,
-          BILLING_METHOD_TYPES: !0,
-          PHYSICAL_PRODUCT_TYPE: !0,
-          DIGITAL_PRODUCT_TYPE: !0,
-          SERVICE_PRODUCT_TYPE: !0,
-          MEMBERSHIP_PRODUCT_TYPE: !0,
-          ADVANCED_PRODUCT_TYPE: !0,
-          TEMPLATE_PRODUCT_TYPES: !0,
-          PRODUCT_TYPE_HELP_TEXT: !0,
-          DEFAULT_PRODUCT_TYPE_ID: !0,
-          DISCOUNTS_CSV_IMPORT_EXPORT_COLUMNS: !0,
-          REQUIRED_DISCOUNT_IMPORT_FIELDS: !0,
-          STRIPE_DISCONNECT_SUBSCRIPTIONS_ERROR_MESSAGE: !0,
-          ORDER_SORT_MODES: !0,
-          SUBSCRIPTION_SORT_MODES: !0,
-          PRODUCTS_BINDING_CONTEXT_EXTERNAL_KEY: !0,
-          paypalCurrencyList: !0,
-          stripeCurrencyList: !0,
-        }),
-      o =
-        ((t.PRICE_TEMPLATE_OPTIONS =
-          t.PRICE_TEMPLATE_CURRENCY_SYMBOL =
-          t.PRICE_TEMPLATE_CURRENCY_CODE =
-          t.PRICE_TEMPLATE_AMOUNT =
-          t.PHYSICAL_PRODUCT_TYPE =
-          t.ORDER_SORT_MODES =
-          t.ORDER_ID_RE =
-          t.MEMBERSHIP_PRODUCT_TYPE =
-          t.MAX_TOTAL_ORDER_PRICE =
-          t.MAX_SEARCH_LIMIT =
-          t.MAX_PRODUCT_DIMENSION =
-          t.MAX_MEMBERSHIP_PRODUCTS =
-          t.INVENTORY_TYPE_INFINITE =
-          t.INVENTORY_TYPE_FINITE =
-          t.INFINITE_INVENTORY =
-          t.ECOMMERCE_PROVIDER_NAME_ENUM =
-          t.DOWNLOAD_FILES_KEY_PATH =
-          t.DOWNLOAD_FILES_FAKE_DATA =
-          t.DOWNLOAD_FILES_EDITABLE_FIELDS =
-          t.DISCOUNTS_CSV_IMPORT_EXPORT_COLUMNS =
-          t.DIGITAL_PRODUCT_TYPE =
-          t.DEFAULT_TAX_CATEGORY =
-          t.DEFAULT_PRODUCT_TYPE_ID =
-          t.DEFAULT_PRICE_TEMPLATE_VALUE =
-          t.CSV_INTEGRATION_CURRENCY_TEMPLATE =
-          t.CSV_CURRENCY_TEMPLATE =
-          t.BILLING_METHOD_TYPES =
-          t.ADVANCED_PRODUCT_TYPE =
-          t.ACTIVE_STRIPE_SUBSCRIPTION_STATUSES =
-            void 0),
-        Object.defineProperty(t, "PRODUCTS_BINDING_CONTEXT_EXTERNAL_KEY", {
-          enumerable: !0,
-          get: function () {
-            return l.PRODUCTS_BINDING_CONTEXT_EXTERNAL_KEY;
-          },
-        }),
-        (t.TEMPLATE_PRODUCT_TYPES =
-          t.SUBSCRIPTION_STATUS_PRETTY_ENUM =
-          t.SUBSCRIPTION_STATUS_ENUM =
-          t.SUBSCRIPTION_SORT_MODES =
-          t.SUBSCRIPTION_INTERVAL_ENUM =
-          t.STRIPE_SUBSCRIPTION_STATUS_ENUM =
-          t.STRIPE_DISCONNECT_SUBSCRIPTIONS_ERROR_MESSAGE =
-          t.SHIPPING_METHODS =
-          t.SERVICE_PRODUCT_TYPE =
-          t.REQUIRED_DISCOUNT_IMPORT_FIELDS =
-          t.PRODUCT_TYPE_HELP_TEXT =
-            void 0),
-        Object.defineProperty(t, "paypalCurrencyList", {
-          enumerable: !0,
-          get: function () {
-            return u.paypalCurrencyList;
-          },
-        }),
-        Object.defineProperty(t, "stripeCurrencyList", {
-          enumerable: !0,
-          get: function () {
-            return d.stripeCurrencyList;
-          },
-        }),
-        i(n(11))),
-      c = i(n(710)),
-      s = n(726),
-      l =
-        (Object.keys(s).forEach(function (e) {
-          "default" === e ||
-            "__esModule" === e ||
-            Object.prototype.hasOwnProperty.call(r, e) ||
-            (e in t && t[e] === s[e]) ||
-            Object.defineProperty(t, e, {
-              enumerable: !0,
-              get: function () {
-                return s[e];
-              },
-            });
-        }),
-        n(727)),
-      u = n(728),
-      d = n(729),
-      i =
-        ((t.ORDER_ID_RE = /^[0-9a-f]{5,}$/),
-        Object.freeze({
-          FLAT: "flat-rate",
-          PERCENTAGE: "percentage",
-          PRICE: "price",
-          QUANTITY: "quantity",
-          WEIGHT: "weight",
-        }));
-    (t.SHIPPING_METHODS = i),
-      (t.DEFAULT_TAX_CATEGORY = "standard-taxable"),
-      (t.INVENTORY_TYPE_FINITE = "finite"),
-      (t.INVENTORY_TYPE_INFINITE = "infinite");
-    function f(e) {
-      var t = e.label,
-        n = e.type,
-        n = void 0 === n ? "PlainText" : n,
-        a = e.path,
-        a = void 0 === a ? (0, c.default)(t) : a,
-        e = e.options;
-      return (0, o.default)(
-        { label: t, type: n },
-        void 0 === e ? { readOnly: !1, isNotAddable: !1 } : e,
-        { value: JSON.stringify({ path: a, type: n }) }
-      );
-    }
-    (t.INFINITE_INVENTORY = { inventoryType: "infinite", quantity: 0 }),
-      (t.MAX_TOTAL_ORDER_PRICE = 99999999),
-      (t.MAX_PRODUCT_DIMENSION = 9e15),
-      (t.MAX_MEMBERSHIP_PRODUCTS = 20),
-      (t.MAX_SEARCH_LIMIT = 100);
-    function p(e) {
-      return "{{wf ".concat(e.value, " }}");
-    }
-    var n = f({ label: "Currency symbol", path: "symbol" }),
-      i =
-        ((t.PRICE_TEMPLATE_CURRENCY_SYMBOL = n),
-        f({
-          label: "Amount",
-          type: "CommercePrice",
-          options: { readOnly: !0, isNotAddable: !0 },
-        })),
-      E = ((t.PRICE_TEMPLATE_AMOUNT = i), f({ label: "Currency code" })),
-      m = [n, i, (t.PRICE_TEMPLATE_CURRENCY_CODE = E)],
-      m =
-        ((t.PRICE_TEMPLATE_OPTIONS = m), [p(n), " ", p(i), " ", p(E)].join("")),
-      m = ((t.DEFAULT_PRICE_TEMPLATE_VALUE = m), [p(n), p(i)].join("")),
-      n = ((t.CSV_CURRENCY_TEMPLATE = m), [p(i), " ", p(E)].join("")),
-      m =
-        ((t.CSV_INTEGRATION_CURRENCY_TEMPLATE = n),
-        (t.DOWNLOAD_FILES_FAKE_DATA = [
-          {
-            id: "5d8fcb6d94dd1853060fb3b3",
-            name: "The modern web design process - Flexblox Ebook.pdf",
-            url: "https://assets-global.website-files.com/5cf6b7202bf8199f50d43e6c/5e9dd8a680b972888929747b_The%20modern%20web%20design%20process%20-%20Flexblox%20Ebook.pdf",
-          },
-          {
-            id: "5d8fcb6d94dd1853060fb3b4",
-            name: "The freelance web designers guide - Flexblox Ebook.pdf",
-            url: "https://assets-global.website-files.com/5cf6b7202bf8199f50d43e6c/5e9dd8e6abe52b33243a22cf_The%20freelance%20web%20designer%E2%80%99s%20guide%20-%20Flexblox%20Ebook.pdf",
-          },
-        ]),
-        (t.DOWNLOAD_FILES_KEY_PATH = "download-files"),
-        (t.DOWNLOAD_FILES_EDITABLE_FIELDS = { name: !0, url: !0 }),
-        (t.SUBSCRIPTION_INTERVAL_ENUM = ["day", "week", "month", "year"]),
-        (t.SUBSCRIPTION_STATUS_ENUM = {
-          active: "active",
-          pastdue: "pastdue",
-          unpaid: "unpaid",
-          canceled: "canceled",
-          cancelPending: "cancelPending",
-          incomplete: "incomplete",
-          incompleteExpired: "incompleteExpired",
-          trialing: "trialing",
-          unknown: "unknown",
-        }),
-        (t.SUBSCRIPTION_STATUS_PRETTY_ENUM = {
-          active: "active",
-          pastdue: "pastdue",
-          unpaid: "unpaid",
-          canceled: "canceled",
-          cancelPending: "cancelPending",
-          incomplete: "incomplete",
-          incompleteExpired: "incompleteExpired",
-          trialing: "in trial",
-          unknown: "unknown",
-        }),
-        {
-          active: "active",
-          past_due: "past_due",
-          unpaid: "unpaid",
-          canceled: "canceled",
-          incomplete: "incomplete",
-          incomplete_expired: "incomplete_expired",
-          trialing: "trialing",
-        }),
-      i = [
-        (t.STRIPE_SUBSCRIPTION_STATUS_ENUM = m).active,
-        m.past_due,
-        m.trialing,
-      ],
-      E =
-        ((t.ACTIVE_STRIPE_SUBSCRIPTION_STATUSES = i),
-        (t.ECOMMERCE_PROVIDER_NAME_ENUM = { stripe: "stripe" }),
-        [
-          { fieldSlug: "name", required: !0 },
-          { fieldSlug: "slug", required: !0 },
-          {
-            fieldSlug: "sku-properties",
-            required: !(t.BILLING_METHOD_TYPES = {
-              subscription: "subscription",
-              oneTime: "one-time",
-            }),
-          },
-          { fieldSlug: "category", required: !1 },
-          { fieldSlug: "description", required: !1 },
-          { fieldSlug: "tax-category", required: !1 },
-          { fieldSlug: "default-sku", required: !1 },
-          { fieldSlug: "ec-product-type", required: !1 },
-          { fieldSlug: "options", required: !1 },
-        ]),
-      n = [
-        { fieldSlug: "sku-values", required: !1 },
-        { fieldSlug: "product", required: !1 },
-        { fieldSlug: "main-image", required: !1 },
-        { fieldSlug: "more-images", required: !1 },
-        { fieldSlug: "price", required: !0 },
-        { fieldSlug: "compare-at-price", required: !1 },
-        { fieldSlug: "ec-sku-subscription-plan", required: !1 },
-        { fieldSlug: "sku", required: !1 },
-        { fieldSlug: "ec-sku-billing-method", required: !1 },
-        { fieldSlug: "track-inventory", required: !1 },
-        { fieldSlug: "quantity", required: !1 },
-      ],
-      m = {
-        name: "Physical",
-        id: "ff42fee0113744f693a764e3431a9cc2",
-        fields: {
-          product: [].concat(E, [{ fieldSlug: "shippable", required: !1 }]),
-          sku: [].concat(n, [
-            { fieldSlug: "weight", required: !1 },
-            { fieldSlug: "width", required: !1 },
-            { fieldSlug: "height", required: !1 },
-            { fieldSlug: "length", required: !1 },
-          ]),
-        },
-      },
-      i =
-        ((t.PHYSICAL_PRODUCT_TYPE = m),
-        {
-          name: "Digital",
-          id: "f22027db68002190aef89a4a2b7ac8a1",
-          fields: {
-            product: [].concat(E),
-            sku: [].concat(n, [{ fieldSlug: "download-files", required: !0 }]),
-          },
-        }),
-      y =
-        ((t.DIGITAL_PRODUCT_TYPE = i),
-        {
-          name: "Service",
-          id: "c599e43b1a1c34d5a323aedf75d3adf6",
-          fields: { product: [].concat(E), sku: [].concat(n) },
-        }),
-      E =
-        ((t.SERVICE_PRODUCT_TYPE = y),
-        {
-          name: "Membership",
-          id: "e348fd487d0102946c9179d2a94bb613",
-          fields: {
-            product: [].concat(E, [{ fieldSlug: "shippable", required: !1 }]),
-            sku: [].concat(n, [
-              { fieldSlug: "weight", required: !1 },
-              { fieldSlug: "width", required: !1 },
-              { fieldSlug: "height", required: !1 },
-              { fieldSlug: "length", required: !1 },
-              { fieldSlug: "download-files", required: !1 },
-              { fieldSlug: "include-downloads", required: !1 },
-            ]),
-          },
-        }),
-      n = { name: "Advanced", id: "b6ccc1830db4b1babeb06a9ac5f6dd76" },
-      T = [
-        m,
-        i,
-        y,
-        (t.MEMBERSHIP_PRODUCT_TYPE = E),
-        (t.ADVANCED_PRODUCT_TYPE = n),
-      ],
-      i =
-        ((t.TEMPLATE_PRODUCT_TYPES = T).reduce(function (e, t) {
-          return (e[t.id] = ""), e;
-        }, {}),
-        a(
-          (T = {}),
-          m.id,
-          "Physical products are shipped to the customer (e.g., merchandise, apparel)."
-        ),
-        a(
-          T,
-          i.id,
-          "Digital products are immediately downloadable by the customer after checkout (e.g., audio files, ebooks)."
-        ),
-        a(
-          T,
-          y.id,
-          "Service products do not require a shipping address during checkout (e.g., classes, consultations)."
-        ),
-        a(
-          T,
-          E.id,
-          "Membership products give users access to gated content through recurring or one-time payment (e.g., subscriptions, one-time membership fee). Membership products require a user login and can only be purchased once."
-        ),
-        a(
-          T,
-          n.id,
-          "Advanced products provide all available customizable options."
-        ),
-        T),
-      y = ((t.PRODUCT_TYPE_HELP_TEXT = i), m.id),
-      E =
-        ((t.DEFAULT_PRODUCT_TYPE_ID = y),
-        (t.DISCOUNTS_CSV_IMPORT_EXPORT_COLUMNS = [
-          "name",
-          "code",
-          "notes",
-          "type",
-          "percentOff",
-          "amountOff",
-          "validOn",
-          "expiresOn",
-          "enabled",
-          "orderMinimum",
-          "totalUsage",
-          "maxAmountOff",
-          "usage.limit.total",
-          "usage.limit.customer",
-          "appliesTo.scope",
-          "appliesTo.filter",
-          "appliesTo.applyOnce",
-        ]),
-        (t.REQUIRED_DISCOUNT_IMPORT_FIELDS = [
-          "name",
-          "code",
-          "type",
-          ["percentOff", "amountOff"],
-        ]),
-        (t.STRIPE_DISCONNECT_SUBSCRIPTIONS_ERROR_MESSAGE =
-          "Stripe disconnect attempted with non-canceled subscriptions"),
-        Object.freeze({
-          "-count": "-purchasedItemsCount -_id",
-          count: "purchasedItemsCount _id",
-          "-name": "-customerInfo.fullName -_id",
-          name: "customerInfo.fullName _id",
-          "-orderid": "-orderId",
-          orderid: "orderId",
-          "-paid": "-customerPaid.unit -customerPaid.value -_id",
-          paid: "customerPaid.unit customerPaid.value _id",
-          "-status": "-statusCode -_id",
-          status: "statusCode _id",
-          "-time": "-acceptedOn -_id",
-          time: "acceptedOn _id",
-        })),
-      a =
-        ((t.ORDER_SORT_MODES = E),
-        Object.freeze({
-          "-lastBilled": "-lastInvoiced -_id",
-          lastBilled: "lastInvoiced _id",
-          "-nextBilling": "-paidUntil -_id",
-          nextBilling: "paidUntil _id",
-          "-orderid": "-orderId",
-          orderid: "orderId",
-          "-purchased": "-subCreatedOn -_id",
-          purchased: "subCreatedOn _id",
-          "-status": "-status -_id",
-          status: "status _id",
-          "-trialing": "-trialing -_id",
-          trialing: "trialing _id",
-        }));
-    t.SUBSCRIPTION_SORT_MODES = a;
   },
   function (e, t) {
     (e.exports = function (e, t, n) {
@@ -888,7 +419,6 @@
     e.exports = n.bind
       ? n.bind(n)
       : function () {
-          return n.apply(n, arguments);
         };
   },
   function (e, t, n) {
@@ -910,12 +440,6 @@
                 return typeof e;
               }
             : function (e) {
-                return e &&
-                  "function" == typeof Symbol &&
-                  e.constructor === Symbol &&
-                  e !== Symbol.prototype
-                  ? "symbol"
-                  : typeof e;
               }),
         (t.exports.__esModule = !0),
         (t.exports.default = t.exports),
@@ -970,7 +494,6 @@
             Object.defineProperty(t, e, {
               enumerable: !0,
               get: function () {
-                return c[e];
               },
             });
         }),
@@ -984,7 +507,6 @@
             Object.defineProperty(t, e, {
               enumerable: !0,
               get: function () {
-                return s[e];
               },
             });
         }),
@@ -1134,7 +656,6 @@
             Object.defineProperty(t, e, {
               enumerable: !0,
               get: function () {
-                return c[e];
               },
             });
         }),
@@ -1518,9 +1039,6 @@
   function (e, t, n) {
     var a = n(71),
       i = n(87);
-    e.exports = function (e) {
-      return a(i(e));
-    };
   },
   function (e, t, n) {
     var s = n(0),
@@ -1574,7 +1092,6 @@
           : r
           ? r(e, t)
           : function () {
-              return e.apply(t, arguments);
             }
       );
     };
@@ -1615,9 +1132,6 @@
       i = n(102),
       r = a.String;
     e.exports = function (e) {
-      if ("Symbol" === i(e))
-        throw TypeError("Cannot convert a Symbol value to a string");
-      return r(e);
     };
   },
   function (e, t, n) {
@@ -1716,157 +1230,42 @@
       r = n(20),
       o =
         ((t.safeParseJson = function (e) {
-          var t = null;
-          try {
-            null != e && (t = JSON.parse(decodeURIComponent(e)));
-          } catch (e) {
-            if (!(e instanceof SyntaxError && e.message.match(/\bJSON\b/i)))
-              throw e;
-          } finally {
-            return t;
-          }
         }),
         (t.findElementByNodeType = function (e) {
-          return (
-            1 < arguments.length && void 0 !== arguments[1]
-              ? arguments[1]
-              : document
-          ).querySelector(
-            "[".concat(r.DATA_ATTR_NODE_TYPE, '="').concat(e, '"]')
-          );
         }),
         (t.findAllElementsByNodeType = function (e) {
-          var t =
-            1 < arguments.length && void 0 !== arguments[1]
-              ? arguments[1]
-              : document;
-          return Array.from(
-            t.querySelectorAll(
-              "[".concat(r.DATA_ATTR_NODE_TYPE, '="').concat(e, '"]')
-            )
-          );
         }),
         (t.findClosestElementByNodeType = function (e, t) {
-          for (var n = t; n; ) {
-            if (
-              n instanceof Element &&
-              n.getAttribute(r.DATA_ATTR_NODE_TYPE) === e
-            )
-              return n;
-            n = n instanceof Element ? n.parentElement : null;
-          }
-          return n;
         }),
         (t.findClosestElementWithAttribute = function (e, t) {
-          for (var n = t; n; ) {
-            if (n instanceof Element && n.hasAttribute(e)) return n;
-            n = n instanceof Element ? n.parentElement : null;
-          }
-          return n;
         }),
         (t.findClosestElementByClassName = function (e, t) {
-          for (var n = t; n; ) {
-            if (n instanceof Element && n.classList.contains(e)) return n;
-            n = n instanceof Element ? n.parentElement : null;
-          }
-          return n;
         }),
         (t.triggerRender = function (e) {
-          e = new CustomEvent(r.RENDER_TREE_EVENT, {
-            detail: {
-              error: e,
-              isInitial:
-                1 < arguments.length && void 0 !== arguments[1] && arguments[1],
-            },
-          });
-          window.dispatchEvent(e);
         }),
         (t.isProductionLikeEnv = function () {
-          return !0;
         }),
         (t.isProtocolHttps = function () {
-          return "https:" === window.location.protocol;
         }),
         (t.formToObject = function (e, n) {
-          var a = {};
-          return (
-            Array.from(e.elements).forEach(function (e) {
-              var t = e.getAttribute("name");
-              t &&
-                "" !== t &&
-                ((e = n ? String(e.value).trim() : e.value),
-                (a[t] = null == e || "" === e ? null : e));
-            }),
-            a
-          );
         }),
         (t.customDataFormToArray = function (e) {
-          var n = [];
-          return (
-            e &&
-              e instanceof HTMLFormElement &&
-              Array.from(e.elements).forEach(function (e) {
-                var t = e.getAttribute("name");
-                e instanceof HTMLTextAreaElement && e.value
-                  ? n.push({ name: t || "Textarea", textArea: e.value })
-                  : e instanceof HTMLInputElement &&
-                    ("checkbox" === e.type
-                      ? n.push({ name: t || "Checkbox", checkbox: e.checked })
-                      : e.value &&
-                        n.push({
-                          name: t || "Text Input",
-                          textInput: e.value,
-                        }));
-              }),
-            n
-          );
         }),
         (t.setElementLoading = function (e) {
-          function t() {
-            n.start({ opacity: 0.2 }).then({ opacity: 0.4 }).then(t);
-          }
-          var n = window.Flexblox.tram(e);
-          n.set({ opacity: 0.2 }), n.add("opacity 500ms ease-in-out");
-          return (
-            t(),
-            function () {
-              return n.destroy();
-            }
-          );
         }),
         []),
       c =
         ((t.addLoadingCallback = function (e) {
-          o.push(e);
         }),
         (t.executeLoadingCallbacks = function () {
-          for (var e; void 0 !== (e = o.shift()); ) e();
         }),
         (t.isFreeOrder = function (e) {
-          return (
-            e &&
-            e.data &&
-            e.data.database &&
-            e.data.database.commerceOrder &&
-            e.data.database.commerceOrder.statusFlags &&
-            !0 === e.data.database.commerceOrder.statusFlags.isFreeOrder
-          );
         }),
         (t.hasSubscription = function (e) {
-          return (
-            e &&
-            e.data &&
-            e.data.database &&
-            e.data.database.commerceOrder &&
-            e.data.database.commerceOrder.statusFlags &&
-            !0 === e.data.database.commerceOrder.statusFlags.hasSubscription
-          );
         }),
         (t.showElement = function (e) {
-          return e.style.removeProperty("display");
         }),
         (t.hideElement = function (e) {
-          return e.style.setProperty("display", "none");
         }),
         (0, i.default)(
           a([
@@ -1875,15 +1274,6 @@
         )),
       s =
         ((t.fetchOrderStatusFlags = function (e) {
-          return e.query({ query: c }).then(function (e) {
-            return (
-              e &&
-              e.data &&
-              e.data.database &&
-              e.data.database.commerceOrder &&
-              e.data.database.commerceOrder.statusFlags
-            );
-          });
         }),
         (0, i.default)(
           a([
@@ -1891,71 +1281,6 @@
           ])
         ));
     t.trackOrder = function (e, a) {
-      if ("undefined" != typeof fbq || "undefined" != typeof gtag) {
-        var i = {};
-        try {
-          var t = window.localStorage.getItem("wf-seen-orders");
-          t && (i = JSON.parse(t));
-        } catch (e) {
-          return;
-        }
-        i[a.orderId] ||
-          e
-            .query({ query: s, variables: { finalizedOrder: a } })
-            .then(function (e) {
-              return null == e ||
-                null == (e = e.data) ||
-                null == (e = e.database)
-                ? void 0
-                : e.commerceOrder;
-            })
-            .then(function (e) {
-              if (e) {
-                var t = e.total,
-                  n = t.decimalValue,
-                  t = t.unit;
-                "undefined" != typeof fbq &&
-                  "function" == typeof fbq &&
-                  fbq("track", "Purchase", {
-                    value: n,
-                    currency: t,
-                    content_ids: (e.userItems || []).map(function (e) {
-                      return e.sku.id;
-                    }),
-                    content_type: "product",
-                    contents: (e.userItems || []).map(function (e) {
-                      return {
-                        id: e.sku.id,
-                        quantity: e.count,
-                        item_price: e.price.decimalValue,
-                      };
-                    }),
-                  }),
-                  "undefined" != typeof gtag &&
-                    "function" == typeof gtag &&
-                    gtag("event", "purchase", {
-                      transaction_id: e.id,
-                      value: n,
-                      currency: t,
-                      items: (e.userItems || []).map(function (e) {
-                        return {
-                          id: e.sku.id,
-                          name: e.product.f_name_,
-                          quantity: e.count,
-                          price: e.price.decimalValue,
-                        };
-                      }),
-                    }),
-                  (i[a.orderId] = !0);
-                try {
-                  window.localStorage.setItem(
-                    "wf-seen-orders",
-                    JSON.stringify(i)
-                  );
-                } catch (e) {}
-              }
-            });
-      }
     };
   },
   function (e, t, n) {
@@ -1996,14 +1321,10 @@
           })
         : ((n[(u = b("state"))] = !0),
           (c = function (e, t) {
-            if (y(e, u)) throw new g("Object already initialized");
-            return (t.facade = e), m(e, u, t), t;
           }),
           (s = function (e) {
-            return y(e, u) ? e[u] : {};
           }),
           function (e) {
-            return y(e, u);
           })),
       (e.exports = {
         set: c,
@@ -2013,19 +1334,13 @@
           return l(e) ? s(e) : c(e, {});
         },
         getterFor: function (t) {
-          return function (e) {
-            if (E(e) && (e = s(e)).type === t) return e;
-            throw g("Incompatible receiver, " + t + " required");
-          };
+
         },
       });
   },
   function (e, t, n) {
     function a() {}
     function i(e) {
-      e.write(p("")), e.close();
-      var t = e.parentWindow.Object;
-      return (e = null), t;
     }
     var r,
       o = n(15),
@@ -2036,40 +1351,13 @@
       d = n(119),
       f = n(121)("IE_PROTO"),
       p = function (e) {
-        return "<script>" + e + "</script>";
       },
       E = function () {
-        try {
-          r = new ActiveXObject("htmlfile");
-        } catch (e) {}
-        var e, t;
-        E =
-          "undefined" == typeof document || (document.domain && r)
-            ? i(r)
-            : (((t = d("iframe")).style.display = "none"),
-              u.appendChild(t),
-              (t.src = String("javascript:")),
-              (e = t.contentWindow.document).open(),
-              e.write(p("document.F=Object")),
-              e.close(),
-              e.F);
-        for (var n = s.length; n--; ) delete E.prototype[s[n]];
-        return E();
       };
     (l[f] = !0),
       (e.exports =
         Object.create ||
         function (e, t) {
-          var n;
-          return (
-            null !== e
-              ? ((a.prototype = o(e)),
-                (n = new a()),
-                (a.prototype = null),
-                (n[f] = e))
-              : (n = E()),
-            void 0 === t ? n : c(n, t)
-          );
         });
   },
   function (e, t, n) {
@@ -2123,7 +1411,6 @@
             null,
             t ||
               function () {
-                throw 1;
               },
             1
           );
@@ -2154,8 +1441,6 @@
   },
   function (e, t) {
     (e.exports = function (e, t) {
-      if (!(e instanceof t))
-        throw new TypeError("Cannot call a class as a function");
     }),
       (e.exports.__esModule = !0),
       (e.exports.default = e.exports);
@@ -2253,16 +1538,12 @@
       throw new Error("Not a valid GraphQL document.");
     }
     ((a.default = a).resetCaches = function () {
-      (s = {}), (l = {});
     }),
       (a.disableFragmentWarnings = function () {
-        u = !1;
       }),
       (a.enableExperimentalFragmentVariables = function () {
-        d = !0;
       }),
       (a.disableExperimentalFragmentVariables = function () {
-        d = !1;
       }),
       (e.exports = a);
   },
@@ -2270,62 +1551,24 @@
     "use strict";
     Object.defineProperty(t, "__esModule", { value: !0 }),
       (t.addHiddenClass = function (e) {
-        e && e.classList.add("w-hidden");
       }),
       (t.disableSubmit = function (e) {
-        if (!(e instanceof HTMLInputElement)) return "";
-        e.setAttribute("disabled", "true");
-        var t = e.getAttribute("value"),
-          n = e.getAttribute("data-wait");
-        return n && e.setAttribute("value", n), null != t ? t : "";
       }),
       (t.getDomParser = function () {
-        var t = new window.DOMParser();
-        return {
-          getHtmlFromString: function (e) {
-            (e = decodeURIComponent(e)),
-              (e = t.parseFromString(e, "text/html"));
-            return e && e.body && e.body.firstChild ? e.body.firstChild : null;
-          },
-        };
       }),
       (t.getErrorAttrName = void 0),
       (t.getRedirectPath = i),
       (t.handleErrorNode = t.getSignupErrorCode = void 0),
       (t.handleRedirect = function (e) {
-        var t = 1 < arguments.length && void 0 !== arguments[1] && arguments[1],
-          n = i();
-        return n
-          ? t
-            ? setTimeout(function () {
-                return window.Flexblox.location(n);
-              }, 3e3)
-            : window.Flexblox.location(n)
-          : e
-          ? t
-            ? setTimeout(function () {
-                return window.Flexblox.location(e);
-              }, 3e3)
-            : window.Flexblox.location(e)
-          : void 0;
       }),
       (t.hideElement = function (e) {
-        e && (e.style.display = "none");
       }),
       (t.redirectWithUsrdir = function (e) {
-        var t = i(),
-          t = t
-            ? t[0].substring("?usredir=".length)
-            : encodeURIComponent(window.location.pathname);
-        window.location = e + "?usredir=".concat(t);
       }),
       (t.removeHiddenClass = u),
       (t.resetSubmit = function (e, t) {
-        e instanceof HTMLInputElement &&
-          (e.removeAttribute("disabled"), e.setAttribute("value", t));
       }),
       (t.showAndFocusElement = function (e) {
-        e && ((e.style.display = "block"), e.focus());
       }),
       (t.showElement = r),
       (t.userSystemsRequestClient = t.userFormError = void 0);
@@ -2337,117 +1580,24 @@
         maxAttempts: 5,
       });
     function u(e) {
-      e && e.classList.remove("w-hidden");
     }
     function r(e) {
-      e && (e.style.display = "block");
     }
     t.userSystemsRequestClient = n;
     function o(e, t) {
-      return (
-        (t = t.replace("_", "-").toLowerCase()),
-        "".concat(e, "-").concat(t, "-error")
-      );
     }
     function d(e, t, n, a, i) {
-      (a = o(a, n)),
-        (n = e && e.getAttribute(a)),
-        e.setAttribute("aria-live", "assertive"),
-        (e.textContent = n || i),
-        r(t);
     }
     t.getErrorAttrName = o;
     function i() {
-      var e = window.location.search.match(/[?|&]usredir=([^&]+)/g);
-      if (e)
-        return (e = e[0].substring("?usredir=".length)), decodeURIComponent(e);
     }
     t.handleErrorNode = d;
     var f = [".w-file-upload-error"],
       p = l.signUpErrorStates[l.SIGNUP_UI_ERROR_CODES.GENERAL_ERROR].copy,
       E =
         ((t.userFormError = function (o, c, s) {
-          return function (e) {
-            var t, n, a, i, r;
-            null !== c &&
-              null !== o &&
-              ((t = c.querySelector(".".concat(l.ERROR_MSG_CLASS))),
-              (n =
-                null == (n = e.graphQLErrors) || null == (n = n[0])
-                  ? void 0
-                  : n.failedValidations) &&
-                ((a = o),
-                (i = n),
-                (r = []),
-                f.forEach(function (e) {
-                  for (var t = a.querySelectorAll(e), n = 0; n < t.length; ++n)
-                    r.push(t[n]);
-                }),
-                r.forEach(function (e) {
-                  for (var t = 0; t < i.length; ++t) {
-                    var n = i[t],
-                      a = n.name,
-                      n = n.fieldId,
-                      n = e.querySelectorAll(
-                        "[" + l.USYS_DATA_ATTRS.field + '="' + n + '"]'
-                      );
-                    if (
-                      n &&
-                      (function (e, t, n) {
-                        for (var a = 0; a < t.length; ++a) {
-                          var i = t[a].getAttribute(n);
-                          if (i) return (t[a].innerHTML = i), u(e), !0;
-                        }
-                      })(e, n, a)
-                    )
-                      break;
-                  }
-                })),
-              (e =
-                null !=
-                (n =
-                  null == e ||
-                  null == (n = e.graphQLErrors) ||
-                  null == (e = n[0])
-                    ? void 0
-                    : e.code)
-                  ? n
-                  : ""),
-              (n = E(e)),
-              d(t, c, n, l.ERROR_ATTRIBUTE_PREFIX[s], p));
-          };
         }),
         function (e) {
-          var t;
-          switch (e) {
-            case "UsysInvalidUserData":
-              t = l.SIGNUP_UI_ERROR_CODES.VALIDATION_FAILED;
-              break;
-            case "UsysUnauthorizedEmail":
-              t = l.SIGNUP_UI_ERROR_CODES.NOT_ALLOWED;
-              break;
-            case "UsysMustUseInvitation":
-              t = l.SIGNUP_UI_ERROR_CODES.USE_INVITE_EMAIL;
-              break;
-            case "UsysDuplicateEmail":
-              t = l.SIGNUP_UI_ERROR_CODES.EMAIL_ALREADY_EXIST;
-              break;
-            case "UsysInvalidEmail":
-              t = l.SIGNUP_UI_ERROR_CODES.INVALID_EMAIL;
-              break;
-            case "UsysInvalidPassword":
-              t = l.SIGNUP_UI_ERROR_CODES.INVALID_PASSWORD;
-              break;
-            case "UsysInvalidToken":
-              t = l.SIGNUP_UI_ERROR_CODES.NOT_VERIFIED;
-              break;
-            case "UsysExpiredToken":
-              t = l.SIGNUP_UI_ERROR_CODES.EXPIRED_TOKEN;
-              break;
-            default:
-              t = l.SIGNUP_UI_ERROR_CODES.GENERAL_ERROR;
-          }
-          return t;
         });
     t.getSignupErrorCode = E;
   },
@@ -2463,7 +1613,6 @@
     e.exports =
       Array.isArray ||
       function (e) {
-        return "Array" == a(e);
       };
   },
   function (e, t, n) {
@@ -32299,8 +31448,6 @@
       }
     }
     function r(e, t) {
-      if (!(e instanceof t))
-        throw new TypeError("Cannot call a class as a function");
     }
     function o() {
       return "function" == typeof Symbol;
